@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osztálykirándulás</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-[#333333] select-none">
+    <div class="relative h-64 bg-blue-600 text-white flex items-center justify-center shadow-lg">
+        <img src="img/fejermegye.jpg" class="absolute w-full h-full object-cover opacity-60">
+        <div class="relative z-10 text-center">
+            <h1 class="text-4xl font-bold drop-shadow">Osztálykirándulás</h1>
+            <p class="mt-2 text-lg">Fedezzük fel Fejér megyét!</p>
+        </div>
+    </div>
+
+<div class="container mx-auto mt-10 px-4">
+
+<div class="mb-10 text-center">
+    <h2 class="text-3xl font-semibold mb-4 dark:text-white">
+        <i class="fas fa-hourglass-half text-blue-600 mr-2"></i>Visszaszámláló
+    </h2>
+    <p class="text-lg dark:text-white">Indulásig hátralévő idő:</p>
+
+    <div id="countdown" class="text-2xl font-bold mt-4 text-blue-600 flex justify-center gap-2">
+        <span><span id="days" class="odometer">0</span> nap</span>
+        <span><span id="hours" class="odometer">0</span> óra</span>
+        <span><span id="mins" class="odometer">0</span> perc</span>
+    </div>
+</div>
+
+
+    <div class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4 flex items-center dark:text-white">
+            <i class="fas fa-bed mr-3 text-blue-600"></i> Szállás
+        </h2>
+        <div class="bg-white rounded-lg shadow p-6 flex gap-6 dark:bg-[#4A4A4A] dark:text-white">
+            <img src="img/haz.jpg" alt="Szállás" class="w-[200px] rounded-lg object-cover">
+            <div>
+                <p>Egy közeli ifjúsági szállóban kapunk szobákat, ahol 4–6 fős elhelyezést biztosítanak. A szállás modern, közös társalgóval rendelkezik.</p>
+                <p class="mt-2 font-semibold">Ár: 5999 Ft / fő / éj</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4 flex items-center dark:text-white">
+            <i class="fas fa-bus mr-3 text-blue-600"></i> Közlekedés
+        </h2>
+        <div class="bg-white rounded-lg shadow p-6 flex gap-6 dark:bg-[#4A4A4A] dark:text-white">
+            <img src="img/busz.jpg" alt="Busz" class="w-[200px] rounded-lg object-cover">
+            <div>
+                <p>A helyszínekre busszal utazunk, amelyet az osztály számára bérelünk. A közlekedés kényelmes, légkondicionált busszal történik.</p>
+                <p class="mt-2 font-semibold">Ár: 3499 Ft / fő</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4 flex items-center dark:text-white">
+        <i class="fas fa-utensils mr-3 text-blue-600"></i> Étkezés
+        </h2>
+        <div class="bg-white rounded-lg shadow p-6 flex gap-6 dark:bg-[#4A4A4A] dark:text-white">
+            <img src="img/kaja.jpg" alt="Étel" class="w-[200px] rounded-lg object-cover">
+            <div>
+                <p>Napi háromszori étkezést kapunk (reggeli, ebéd, vacsora). A menü változatos, vegetáriánus lehetőséggel is.</p>
+                <p class="mt-2 font-semibold">Ár: kb. 1499 Ft / fő / nap</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-10">
+        <h2 class="text-3xl font-semibold mb-6 flex items-center dark:text-white">
+        <i class="fas fa-map-marked-alt mr-3 text-blue-600"></i> Programok
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/bory.jpg" alt="Bory-vár" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Bory-vár (Öreg-hegy)</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Egy különleges építészeti remekmű, tele szobrokkal, festményekkel és történetekkel.</p>
+                <p class="mt-2 font-bold text-blue-600">Belépő: 2000 Ft / fő</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/karolyi.jpg" alt="Károlyi-birtok" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Károlyi-birtok (Fehérvárcsurgó)</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50 dark:text-white/50">Egy gyönyörű kastély és park, ahol bepillantást nyerhetünk a történelmi arisztokrácia életébe.</p>
+                <p class="mt-2 font-bold text-blue-600">Belépő: 1500 Ft / fő</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/szocreal.webp" alt="Dunaújváros" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Dunaújváros – szocreál emlékek</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Egyedülálló szocreál városrész, utcák és épületek a 20. század közepéről.</p>
+                <p class="mt-2 font-bold text-blue-600">Ingyenes</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/piramita.jpg" alt="Piramita-hegy" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Piramita-hegy</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Fejér megye saját „piramisa”, érdekes látványosság a természetben.</p>
+                <p class="mt-2 font-bold text-blue-600">Ingyenes</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/szobor.jpg" alt="Szerelemszobor" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Vál – Szerelemszobor</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Romantikus szobor, a helyiek egyik különleges látványossága.</p>
+                <p class="mt-2 font-bold text-blue-600">Ingyenes</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/varpark.jpg" alt="Dinnyési Várpark" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Dinnyési Várpark</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Magyar várak kicsinyített másai, szabadtéri történelmi bemutatóhely.</p>
+                <p class="mt-2 font-bold text-blue-600">Ingyenes</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/emlekhaz.jpg" alt="Gárdonyi Géza háza" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Gárdony – Gárdonyi Géza szülőháza</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Az Egri csillagok írójának emlékháza, irodalmi kiállítással.</p>
+                <p class="mt-2 font-bold text-blue-600">Belépő: 1000 Ft / fő</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/orajatek.jpg" alt="Órajáték" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Órajáték</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Népszerű látványosság, minden órában különleges figurás játék indul.</p>
+                <p class="mt-2 font-bold text-blue-600">Ingyenes</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/rompark.jpg" alt="Tác rompark" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Tác – római rompark</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Gorsium, egy jelentős római kori település romjai.</p>
+                <p class="mt-2 font-bold text-blue-600">Belépő: 1200 Ft / fő</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/seuso.png" alt="Szabadbattyán" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Szabadbattyán – Seuso-kincs lelőhelye</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Híres régészeti lelőhely, a legendás Seuso-kincs megtalálásának helyszíne.</p>
+                <p class="mt-2 font-bold text-blue-600">Ingyenes</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/emlekpark.jpg" alt="Pákozd" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Pákozd – katonai emlékpark</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">1848–49-es szabadságharc emlékhelye, hadtörténeti kiállításokkal.</p>
+                <p class="mt-2 font-bold text-blue-600">Belépő: 1500 Ft / fő</p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow overflow-hidden dark:bg-[#4A4A4A]">
+            <img src="img/zsakfalu.jpg" alt="Vérteskozma" class="h-40 w-full object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-semibold dark:text-white">Vérteskozma – zsákfalu</h3>
+                <p class="text-sm text-gray-600 mt-2 dark:text-white/50">Egy eldugott, varázslatos kis falu a Vértesben, régi házakkal és csenddel.</p>
+                <p class="mt-2 font-bold text-blue-600">Ingyenes</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4 flex items-center dark:text-white">
+            <i class="fas fa-coins mr-3 text-blue-600"></i> Költség összesítés
+        </h2>
+        <div class="bg-white rounded-lg shadow p-6 dark:bg-[#4A4A4A]">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr>
+                        <th class="p-2 dark:text-white">Tétel</th>
+                        <th class="p-2 dark:text-white">Költség / fő</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="p-2 dark:text-white/50">Szállás</td><td class="p-2 dark:text-white/50">6000 Ft</td></tr>
+                    <tr><td class="p-2 dark:text-white/50">Közlekedés</td><td class="p-2 dark:text-white/50">3500 Ft</td></tr>
+                    <tr><td class="p-2 dark:text-white/50">Étkezés</td><td class="p-2 dark:text-white/50">5000 Ft</td></tr>
+                    <tr><td class="p-2 dark:text-white/50">Programok (belépők)</td><td class="p-2 dark:text-white/50">7200 Ft</td></tr>
+                    <tr class="font-bold dark:text-white"><td class="p-2">Összesen</td><td class="p-2 dark:text-white" id="osszeg"></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4 dark:text-white"><i class="fas fa-question-circle text-blue-600 mr-2"></i>Gyakori kérdések</h2>
+        <div class="space-y-4">
+            <details class="bg-white dark:bg-[#4A4A4A] dark:text-white rounded-lg p-4 shadow">
+                <summary class="font-bold cursor-pointer">Mit kell hozni?</summary>
+                <p class="mt-2">Kényelmes ruha, váltócipő, esőkabát, személyes iratok.</p>
+            </details>
+            <details class="bg-white dark:bg-[#4A4A4A] dark:text-white rounded-lg p-4 shadow">
+                <summary class="font-bold cursor-pointer">Van vegetáriánus étel?</summary>
+                <p class="mt-2">Ha vegetáriánus vagy ne gyere.</p>
+            </details>
+            <details class="bg-white dark:bg-[#4A4A4A] dark:text-white rounded-lg p-4 shadow">
+                <summary class="font-bold cursor-pointer">Lesz esti program?</summary>
+                <p class="mt-2">Igen, közös játékok és tábortűz várható.</p>
+            </details>
+        </div>
+    </div>
+
+    <div class="mb-10 text-center">
+        <h2 class="text-3xl font-semibold mb-4 dark:text-white"><i class="fas fa-envelope text-blue-600 mr-2"></i>Kapcsolat</h2>
+        <p class="dark:text-white">Szervező: Madarász István (osztályfőnök)</p>
+        <p class="dark:text-white">Email: <a href="mailto:kapcsolatemail@gmail.com" class="text-blue-600">kapcsolatemail@gmail.com</a></p>
+        <p class="dark:text-white">Telefon: +36 30 123 4567</p>
+    </div>
+
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <button id="darkMode" 
+            class="p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <button id="toTop" 
+            class="hidden p-3 rounded-full bg-gray-700 text-white shadow-lg hover:bg-gray-900 transition">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
