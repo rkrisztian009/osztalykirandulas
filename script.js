@@ -1,11 +1,11 @@
 tailwind.config = { darkMode: 'class' }
 
 $(document).ready(function(){
-    let szallas = 5999;
+    let szallas = 1200;
     let kozlekedes = 1500;
-    let etkezes = 1499;
+    let etkezes = 1000;
     let programok = 2000 + 1500 + 1000 + 1200 + 1500;
-    let osszeg = szallas + kozlekedes + etkezes + programok;
+    let osszeg = szallas + kozlekedes + etkezes + programok *2;
     $("#osszeg").text(osszeg.toLocaleString("hu-HU") + " Ft");
 });
 
@@ -58,4 +58,5 @@ $(window).on("scroll", function () {
 $("#toTop").on("click", function () {
     $("html, body").animate({ scrollTop: 0 }, "smooth");
 });
+
 
