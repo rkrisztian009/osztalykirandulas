@@ -2,7 +2,7 @@ tailwind.config = { darkMode: 'class' }
 
 $(document).ready(function(){
     let szallas = 5999;
-    let kozlekedes = 3499;
+    let kozlekedes = 1500;
     let etkezes = 1499;
     let programok = 2000 + 1500 + 1000 + 1200 + 1500;
     let osszeg = szallas + kozlekedes + etkezes + programok;
@@ -58,3 +58,4 @@ $(window).on("scroll", function () {
 $("#toTop").on("click", function () {
     $("html, body").animate({ scrollTop: 0 }, "smooth");
 });
+
